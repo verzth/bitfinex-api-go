@@ -45,6 +45,7 @@ type Client struct {
 	Book           BookService
 	Wallet         WalletService
 	Ledgers        LedgerService
+	Movements      MovementService
 	Stats          StatsService
 	Status         StatusService
 	Derivatives    DerivativesService
@@ -120,6 +121,7 @@ func NewClientWithSynchronousURLNonce(sync Synchronous, url string, nonce utils.
 	c.Positions = PositionService{Synchronous: c, requestFactory: c}
 	c.Wallet = WalletService{Synchronous: c, requestFactory: c}
 	c.Ledgers = LedgerService{Synchronous: c, requestFactory: c}
+	c.Movements = MovementService{Synchronous: c, requestFactory: c}
 	c.Stats = StatsService{Synchronous: c, requestFactory: c}
 	c.Status = StatusService{Synchronous: c, requestFactory: c}
 	c.Derivatives = DerivativesService{Synchronous: c, requestFactory: c}
