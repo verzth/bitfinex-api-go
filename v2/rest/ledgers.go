@@ -15,6 +15,7 @@ type LedgerService struct {
 }
 
 const (
+	CATEGORY_ALL                     = 0
 	CATEGORY_EXCHANGE                = 5
 	CATEGORY_POSITION                = 22
 	CATEGORY_POSITION_CLAIM          = 23
@@ -42,7 +43,10 @@ func (s *LedgerService) Ledgers(currency string, category int, start int64, end 
 		return nil, fmt.Errorf("Max request limit:%d, got: %d", maxLimit, max)
 	}
 
-	payload := map[string]interface{}{"category": category, "start": start, "end": end, "limit": max}
+	payload := map[string]interface{}{"start": start, "end": end, "limit": max}
+	if category > 0 {
+		payload["category"] = category
+	}
 	req, err := s.requestFactory.NewAuthenticatedRequestWithData(common.PermissionRead, path.Join("ledgers", currency, "hist"), payload)
 	if err != nil {
 		return nil, err
