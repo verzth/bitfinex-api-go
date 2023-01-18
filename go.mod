@@ -1,4 +1,4 @@
-module github.com/bitfinexcom/bitfinex-api-go
+module github.com/verzth/bitfinex-api-go
 
 go 1.15
 

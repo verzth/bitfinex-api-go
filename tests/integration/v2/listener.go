@@ -5,17 +5,17 @@ import (
 	"log"
 	"time"
 
-	"github.com/bitfinexcom/bitfinex-api-go/pkg/models/balanceinfo"
-	"github.com/bitfinexcom/bitfinex-api-go/pkg/models/fundinginfo"
-	"github.com/bitfinexcom/bitfinex-api-go/pkg/models/margin"
-	"github.com/bitfinexcom/bitfinex-api-go/pkg/models/notification"
-	"github.com/bitfinexcom/bitfinex-api-go/pkg/models/order"
-	"github.com/bitfinexcom/bitfinex-api-go/pkg/models/position"
-	"github.com/bitfinexcom/bitfinex-api-go/pkg/models/ticker"
-	"github.com/bitfinexcom/bitfinex-api-go/pkg/models/tradeexecution"
-	"github.com/bitfinexcom/bitfinex-api-go/pkg/models/tradeexecutionupdate"
-	"github.com/bitfinexcom/bitfinex-api-go/pkg/models/wallet"
-	"github.com/bitfinexcom/bitfinex-api-go/v2/websocket"
+	"github.com/verzth/bitfinex-api-go/pkg/models/balanceinfo"
+	"github.com/verzth/bitfinex-api-go/pkg/models/fundinginfo"
+	"github.com/verzth/bitfinex-api-go/pkg/models/margin"
+	"github.com/verzth/bitfinex-api-go/pkg/models/notification"
+	"github.com/verzth/bitfinex-api-go/pkg/models/order"
+	"github.com/verzth/bitfinex-api-go/pkg/models/position"
+	"github.com/verzth/bitfinex-api-go/pkg/models/ticker"
+	"github.com/verzth/bitfinex-api-go/pkg/models/tradeexecution"
+	"github.com/verzth/bitfinex-api-go/pkg/models/tradeexecutionupdate"
+	"github.com/verzth/bitfinex-api-go/pkg/models/wallet"
+	"github.com/verzth/bitfinex-api-go/v2/websocket"
 )
 
 type listener struct {

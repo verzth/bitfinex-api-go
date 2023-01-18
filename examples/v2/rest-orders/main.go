@@ -6,9 +6,9 @@ import (
 	"os"
 	"strconv"
 
-	"github.com/bitfinexcom/bitfinex-api-go/pkg/models/common"
-	"github.com/bitfinexcom/bitfinex-api-go/v2"
-	"github.com/bitfinexcom/bitfinex-api-go/v2/rest"
+	"github.com/verzth/bitfinex-api-go/pkg/models/common"
+	"github.com/verzth/bitfinex-api-go/v2"
+	"github.com/verzth/bitfinex-api-go/v2/rest"
 )
 
 var (

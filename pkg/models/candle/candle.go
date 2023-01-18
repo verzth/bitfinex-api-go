@@ -5,8 +5,8 @@ import (
 	"fmt"
 	"strings"
 
-	"github.com/bitfinexcom/bitfinex-api-go/pkg/convert"
-	"github.com/bitfinexcom/bitfinex-api-go/pkg/models/common"
+	"github.com/verzth/bitfinex-api-go/pkg/convert"
+	"github.com/verzth/bitfinex-api-go/pkg/models/common"
 )
 
 type Candle struct {

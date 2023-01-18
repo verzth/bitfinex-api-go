@@ -4,9 +4,9 @@ import (
 	"sort"
 	"testing"
 
-	"github.com/bitfinexcom/bitfinex-api-go/pkg/models/event"
-	"github.com/bitfinexcom/bitfinex-api-go/pkg/mux/client"
 	"github.com/stretchr/testify/assert"
+	"github.com/verzth/bitfinex-api-go/pkg/models/event"
+	"github.com/verzth/bitfinex-api-go/pkg/mux/client"
 )
 
 func TestSubsLimitReached(t *testing.T) {

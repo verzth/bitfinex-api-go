@@ -5,10 +5,10 @@ import (
 	"os"
 	"time"
 
-	"github.com/bitfinexcom/bitfinex-api-go/pkg/models/common"
-	"github.com/bitfinexcom/bitfinex-api-go/pkg/models/pulse"
-	"github.com/bitfinexcom/bitfinex-api-go/v2/rest"
 	"github.com/davecgh/go-spew/spew"
+	"github.com/verzth/bitfinex-api-go/pkg/models/common"
+	"github.com/verzth/bitfinex-api-go/pkg/models/pulse"
+	"github.com/verzth/bitfinex-api-go/v2/rest"
 )
 
 // Set BFX_API_KEY and BFX_API_SECRET:

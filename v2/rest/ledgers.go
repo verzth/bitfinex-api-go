@@ -4,8 +4,8 @@ import (
 	"fmt"
 	"path"
 
-	"github.com/bitfinexcom/bitfinex-api-go/pkg/models/common"
-	"github.com/bitfinexcom/bitfinex-api-go/pkg/models/ledger"
+	"github.com/verzth/bitfinex-api-go/pkg/models/common"
+	"github.com/verzth/bitfinex-api-go/pkg/models/ledger"
 )
 
 // LedgerService manages the Ledgers endpoint.
@@ -14,16 +14,24 @@ type LedgerService struct {
 	Synchronous
 }
 
+const (
+	CATEGORY_EXCHANGE             = 5
+	CATEGORY_SETTLEMENT           = 31
+	CATEGORY_DEPOSIT              = 101
+	CATEGORY_WITHDRAWAL           = 104
+	CATEGORY_CANCELLED_WITHDRAWAL = 105
+)
+
 var maxLimit int32 = 2500
 
 // Ledgers - all of the past ledger entreies
 // see https://docs.bitfinex.com/reference#ledgers for more info
-func (s *LedgerService) Ledgers(currency string, start int64, end int64, max int32) (*ledger.Snapshot, error) {
+func (s *LedgerService) Ledgers(currency string, category int, start int64, end int64, max int32) (*ledger.Snapshot, error) {
 	if max > maxLimit {
 		return nil, fmt.Errorf("Max request limit:%d, got: %d", maxLimit, max)
 	}
 
-	payload := map[string]interface{}{"start": start, "end": end, "limit": max}
+	payload := map[string]interface{}{"category": category, "start": start, "end": end, "limit": max}
 	req, err := s.requestFactory.NewAuthenticatedRequestWithData(common.PermissionRead, path.Join("ledgers", currency, "hist"), payload)
 	if err != nil {
 		return nil, err

@@ -3,8 +3,8 @@ package book_test
 import (
 	"testing"
 
-	"github.com/bitfinexcom/bitfinex-api-go/pkg/models/book"
-	"github.com/bitfinexcom/bitfinex-api-go/pkg/models/common"
+	"github.com/verzth/bitfinex-api-go/pkg/models/book"
+	"github.com/verzth/bitfinex-api-go/pkg/models/common"
 	"github.com/stretchr/testify/assert"
 	"github.com/stretchr/testify/require"
 )

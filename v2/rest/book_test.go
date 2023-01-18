@@ -6,7 +6,7 @@ import (
 	"net/http"
 	"testing"
 
-	"github.com/bitfinexcom/bitfinex-api-go/pkg/models/common"
+	"github.com/verzth/bitfinex-api-go/pkg/models/common"
 )
 
 func TestBookAll(t *testing.T) {

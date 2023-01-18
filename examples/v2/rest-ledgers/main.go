@@ -5,8 +5,8 @@ import (
 	"os"
 	"time"
 
-	"github.com/bitfinexcom/bitfinex-api-go/v2/rest"
 	"github.com/davecgh/go-spew/spew"
+	"github.com/verzth/bitfinex-api-go/v2/rest"
 )
 
 // Set BFX_API_KEY and BFX_API_SECRET:
@@ -29,7 +29,7 @@ func main() {
 	prior := now.Add(time.Duration(-240) * time.Hour)
 	millisStart := prior.UnixNano() / 1000000
 
-	l, err := c.Ledgers.Ledgers("BTC", millisStart, millis, 1000)
+	l, err := c.Ledgers.Ledgers("BTC", rest.CATEGORY_DEPOSIT, millisStart, millis, 1000)
 	if err != nil {
 		log.Fatalf("Ledgers: %s", err)
 	}
